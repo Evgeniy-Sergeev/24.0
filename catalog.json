@@ -12,6 +12,7 @@
       "updated_at": "2024-12-03"
     }
   },
+
   {
     "model": "catalog.product",
     "pk": 2,

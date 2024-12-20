@@ -14,6 +14,7 @@ files = [
 [package.extras]
 tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
+
 [[package]]
 name = "django"
 version = "5.1.3"
