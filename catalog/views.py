@@ -5,30 +5,24 @@ from catalog.froms import ProductForm
 from catalog.models import Product
 
 
-# Главная страница
 class HomeTemplateView(TemplateView):
     template_name = 'catalog/home.html'
 
 
-# Страница контактов
 class ContactTemplateView(TemplateView):
     template_name = 'catalog/contacts.html'
 
 
-# Просмотр списка продуктов
-# Список продуктов
 class ProductListView(ListView):
     model = Product
     template_name = 'catalog/product_list.html'
 
 
-# Детали продукта
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'catalog/product_detail.html'
 
 
-# Создание нового продукта
 class ProductCreateView(CreateView):
     model = Product
     form_class = ProductForm
@@ -45,7 +39,6 @@ class ProductUpdateView(UpdateView):
         return reverse_lazy('catalog:product_list')
 
 
-# Удаление продукта
 class ProductDeleteView(DeleteView):
     model = Product
     template_name = 'catalog/product_confirm_delete.html'
